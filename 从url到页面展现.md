@@ -1,4 +1,4 @@
-##一.url是什么
+﻿##一.url是什么
 
 >![url1.png](http://upload-images.jianshu.io/upload_images/5430633-6f19606f1ac3fbdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -25,7 +25,7 @@
   　**域名解析如下几种方式**
 
 * 浏览器缓存--浏览器缓存DNS一段时间，以前访问过的网站
-* host文件--在host中查找系统缓存，是否有与该域名对应的IP，一般是新网站。
+* host文件--在host中查找系统缓存，是否有与该域名对应的IP，一般是新网站
 * 路由器缓存--路由器也会缓存域名信息
 * 服务商查找缓存（如电信DNS）
 * 如果都没有找到，则从根域名服务器查找对应IP,根域名服务器把请求转发给下一级，直到找到IP
