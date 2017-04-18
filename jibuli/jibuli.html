@@ -221,7 +221,9 @@
 			left:62%;
 			text-align:left;
 		}
-
+		#team {
+			padding: 240px 0;
+		}
 		#team h1{
 			padding: 0;
 		}
@@ -239,9 +241,7 @@
 			float:left;
 			margin-left: 115px;
 		}
-		#team {
-			padding: 190px 0;
-		}
+		
 		#team .title {
 			margin-bottom: 50px;
 		}
@@ -270,6 +270,58 @@
 			display: block;
 			clear: both;
 		}
+		 .contact-bg{
+	      background-image: url(haer1.jpg);
+	      background-size: cover;
+	      background-position: center;
+	      padding: 200px 0;
+	    }
+	  	#contact {
+	      text-align: center;
+	      width: 1170px;
+	      margin: 0 auto;
+	      opacity: 0.7;
+	      color: #fff;
+	    }
+	    #contact .container * {
+	      display: block;
+	      width: 100%;
+	      padding: 20px;
+	      margin:20px 0;
+	      border-radius: 4px;
+	    }
+	    #contact .area {
+	      height:175px;
+	    }
+	    #contact .container {
+	      width: 450px;
+	      float: left;
+	      margin-left: 75px;
+	    }
+	    #contact #sendForm:after{
+	      content: "";
+	      display: block;
+	      clear: both;
+	    }
+	    .sub {
+	      clear: both;
+	    }
+	    .sub input {
+	      padding: 25px;
+	      border-radius: 4px;
+	      color:#fff;
+	      background:#109CEB;
+	      color:#fff;
+	      border-color: #109CEB;
+	    }
+	    #contact h1 {
+	    	padding-bottom: 40px
+	    }
+
+	    .sub input:hover{
+
+	    }
+
 	</style>
 </head>
 <body>
@@ -278,10 +330,10 @@
 		<ul>
 			<li><a href=""><img src="http://www.ghibli.jp/img/home.png"></a></li>
 			<li><a href="">首页</a></li>
-			<li><a href="">历史</a></li>
-			<li><a href="">作品</a></li>
-			<li><a href="">人员</a></li>
-			<li><a href="">关于</a></li>
+			<li><a href="#history">历史</a></li>
+			<li><a href="#movie">作品</a></li>
+			<li><a href="#team">人员</a></li>
+			<li><a href="#contact">关于</a></li>
 		</ul>
 	</div>
 	<div class="main">
@@ -487,6 +539,30 @@
 	</div>
 	
 </div>
+
+
+<div class="contact-bg">
+  <div id="contact">
+    <div class="form-title">
+      <h1>CONTACT US</h1>
+      <p>Lorem ipsum dolor sit amet consectetur</p>
+    </div>
+    <form id="sendForm">
+      <div class="container">
+        <input placeholder="YOUR NAME*" type="text" name="">
+        <input placeholder="YOUR EMAIL*" type="text" name="">
+        <input placeholder="YOUR PHONE*" type="text" name="">
+      </div>
+      <div class="container">
+        <textarea class="area" placeholder="YOUR MESSAGE*"></textarea>
+      </div>
+      <div class="sub">
+        <input type="submit" name="SEND MESSAGE" value="SEND MESSAGE">  
+      </div>
+      </form>
+  </div>
+</div>
+	
 <div id="footer">
 	<ul>
 		<li><a href="http://www.ghibli.jp/">吉卜力官网</a></li>
@@ -494,9 +570,6 @@
 		<li><a href="https://zh.moegirl.org/zh-hans/%E5%90%89%E5%8D%9C%E5%8A%9B%E5%B7%A5%E4%BD%9C%E5%AE%A4">萌娘百科</a></li>
 		<li><a href="https://zh.wikipedia.org/wiki/%E5%90%89%E5%8D%9C%E5%8A%9B%E5%B7%A5%E4%BD%9C%E5%AE%A4">维基百科</a></li>
 	</ul>
-	
-	
-
 </div>
 </body>
 </html>
