@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #show {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding:2px 10px;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color:black;
+        }
+        #bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0.4;
+            display: none;
+        }
+        #ct {
+            width:500px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            display:none;
+        }
+        #ct p {
+            margin: 5px;
+        }
+        .clearfix::after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+        #header,#content {
+            border-bottom: 1px solid #ccc;
+        }
+        #header a {
+            float: right;
+            margin-top: 1px;
+            margin-right: 5px;
+        }
+        #content {
+            padding: 20px 0;
+        }
+        #footer >* {
+            float: right;
+            margin:5px;
+        }
+        
+        .bg {
+            background-color: #a3a3a3;
+        }
+        .show {
+            display: block !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="#" id="show">点我</a>
+    <div id="bg" class="close"></div>
+    <div id="ct">
+        <div id="header" class="clearfix">
+            <a href="#" class="close">X</a>
+            <p>我是标题1</p>
+        </div>
+        <div id="content">
+            <p>我是内容1</p>
+            <p>我是内容1</p>
+        </div>
+        <div id="footer" class="clearfix">
+            <a href="#">确定</a>
+            <a href="#" class="close">取消</a>
+        </div>
+    </div>
+    <script>
+        var showBt =  document.querySelector("#show");
+        var closeBt = document.querySelectorAll(".close");
+        var container = document.querySelector("#ct");
+        var bg = document.querySelector("#bg");
+        showBt.addEventListener("click",function(e){
+            container.classList.add("show");
+            bg.classList.add("show");
+        });
+        [].forEach.call(closeBt,function(node){
+            node.addEventListener("click",function(e){
+                bg.classList.remove("show"); 
+                container.classList.remove("show");
+            });
+        });
+    </script>
+</body>
+</html>

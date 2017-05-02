@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ct {
+            width:350px;
+        }
+        ul,li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tab >li {
+            float: left;
+            border: 1px solid black;
+            padding: 0 40px;
+            cursor: pointer;
+        }
+        .content >li {
+            padding:20px;
+            display:none;
+        }
+        .content {
+            border:1px solid black;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .active {
+            background-color:#ccc;
+        }
+        .display-block{
+            display: block !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="ct">
+        <ul class = "tab clearfix">
+            <li class="active">tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+        </ul>
+        <ul class = "content">
+            <li class="display-block">内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ul>
+    </div>
+<script>
+    var tab_li = document.querySelector(".tab").children;
+    var content_li = document.querySelector(".content").children;
+    
+
+    for(var i = 0; i<tab_li.length; i++){
+        tab_li[i].addEventListener("click",function(e){
+            [].forEach.call(tab_li,function(node){
+                node.classList.remove("active");
+            });
+            this.classList.add("active");
+            //给点击的tab列表添加active类
+            [].forEach.call(content_li,function(node){
+                node.classList.remove("display-block");
+            });
+            var j = [].indexOf.call(tab_li,this);
+            content_li[j].classList.add("display-block");
+            //给对应的content列表添加display-block类
+        });      
+    }
+</script>
+</body>
+</html>
