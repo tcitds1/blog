@@ -24,11 +24,17 @@
         #ct {
             border: 1px solid #ccc;
         }
+        #ct .tab:nth-child(3) li {
+            border-top:1px solid #ccc;
+        }
         #ct .tab>li {
             float: left;
             padding: 4px;
             border-right: 1px solid #ccc;
             cursor: pointer;
+        }
+        #ct .tab:nth{
+            border: 1px solid #ccc;
         }
         #ct .content {
             width:700px;
@@ -79,7 +85,7 @@
     </style>
 </head>
 <body>
-    <div id="ct">
+    <div id="ct" class="clearfix">
         <ul class="tab clearfix">
             <li class="active">热门</li>
             <li>珠宝首饰</li>
@@ -377,6 +383,7 @@
             </li>
         </ul>
     </div>
+
     <script src="jquery-3.2.1.min.js"></script>
     <script>
         var $tabs = $("#ct .tab>li");
