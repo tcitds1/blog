@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        li,ul,p {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        p {
+            width:137px;
+        }
+        .active {
+            coolor: red;
+            background-color: #cccccc;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #ct {
+            border: 1px solid #ccc;
+        }
+        #ct .tab>li {
+            float: left;
+            padding: 4px;
+            border-right: 1px solid #ccc;
+            cursor: pointer;
+        }
+        #ct .content {
+            width:700px;
+            margin-left: -21px;
+        }
+        #ct .content .product ul li{
+            float: left;
+            border: 1px solid #ccc; 
+            padding: 10px 25px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        #ct .content .product {
+            display: none;
+        }
+        #ct .content .show {
+            display: block;
+        }
+        #ct .content .product p:last-child {
+            color: red;
+        }
+        .hover {
+            opacity: 1;
+        }
+        .cover {
+            position: absolute;
+            background-color:rgba(0,0,0, 0.3);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+        .cover button {
+            padding: 3px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 1px solid red;
+            color: red;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="ct">
+        <ul class="content">
+            <li class="show product">
+                <ul class="clearfix details">
+                    <li>
+                        <div class="cover">
+                            <button>立即抢购</button>
+                        </div>
+                        <img src="http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg" alt="">
+                        <p>珂兰 黄金手 猴哥款</p>
+                        <p>￥405.00</p>
+                    </li>
+                    <li>
+                        <div class="cover">
+                            <button>立即抢购</button>
+                        </div>
+                        <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+                        <p>珂兰 黄金手 猴哥款</p>
+                        <p>￥105.00</p>
+                    </li>
+                    <li>
+                        <div class="cover">
+                            <button>立即抢购</button>
+                        </div>
+                        <img src="http://img13.360buyimg.com/N3/jfs/t2461/336/2166939566/101221/3af27699/56c426a5N9b6673f4.jpg" alt="">
+                        <p>珂兰 黄金手 猴哥款</p>
+                        <p>￥205.00</p>
+                    </li>
+                    <li>
+                        <div class="cover">
+                            <button>立即抢购</button>
+                        </div>
+                        <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
+                        <p>珂兰 黄金手 猴哥款</p>
+                        <p>￥405.00</p>
+                    </li>
+                    <li>
+                        <div class="cover">
+                            <button>立即抢购</button>
+                        </div>
+                        <img src="http://img13.360buyimg.com/N3/jfs/t2461/336/2166939566/101221/3af27699/56c426a5N9b6673f4.jpg" alt="">
+                        <p>珂兰 黄金手 猴哥款</p>
+                        <p>￥205.00</p>
+                    </li>
+                    <li>
+                        <div class="cover">
+                            <button>立即抢购</button>
+                        </div>
+                        <img src="http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg" alt="">
+                        <p>珂兰 黄金手 猴哥款</p>
+                        <p>￥405.00</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <button id="add">添加</button>
+    </div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        var products = [
+        {
+            img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+            name: '珂兰 黄金手 猴哥款',
+            price: '￥405.00'
+        },{
+            img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+            name: '珂兰 黄金转运珠 猴哥款',
+            price: '￥100.00'
+        },{
+            img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+            name: '珂兰 黄金手链 3D猴哥款',
+            price: '￥45.00'
+        }
+    ];
+    var getPro = function(pro){
+        var html = '<li>'
+                        +'<div class="cover">'
+                        +    '<button>立即抢购</button>'
+                        +'</div>'
+                        +'<img src='+'"'+pro.img +'"'+ 'alt="">'
+                        +'<p>'+pro.name + '</p>'
+                        +'<p>'+pro.price+'</p>'
+                    +'</li>'
+        return html;    
+    }
+    var $btn = $("#add");
+    $btn.on("click",function(e){
+        e.preventDefault();
+        $.each(products,function(index,node){
+            var html = getPro(node);
+            $(".details").append(html);
+        });
+    }) ;
+    $(".details").on("mouseover",".cover",function(e){
+        $(this).css("opacity","1");
+    })
+    $(".details").on("mouseout",".cover",function(e){
+        $(this).css("opacity","0");
+    })
+    
+
+    </script>
+</body>
+</html>

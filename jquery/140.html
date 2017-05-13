@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+        ul,li,p{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color:#fff;
+        }
+        
+        .clearfix::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        #list>li {
+            position: relative;
+            width:180px;
+            background-color: red;
+            padding: 7px;
+            border-bottom: 1px dashed #fff; 
+            cursor: pointer;
+            
+        }
+        #list p:first-child{
+            float:right;
+            margin-top:-1px;
+        }
+        #list .detail>li {
+            color: black;
+            float: right;
+            width: 80px;
+            padding: 3px 0;
+            margin-left:20px;
+        }
+        #list .detail {
+            position: absolute;
+            top: 0;
+            left:100%;
+            width: 200px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="ct">
+        <ul id="list">
+            <li class="clearfix">
+                <p>></p>
+                <p>珠宝玉器</p>
+                <ul class="clearfix detail">
+                    <li>翡翠</li>
+                    <li>玉石</li>
+                    <li>宝石</li>
+                    <li>水晶</li>
+                    <li>玛瑙</li>
+                    <li>水晶</li>
+                </ul>
+            </li>
+            <li class="clearfix">
+                <p>></p>
+                <p>珠宝玉器</p>
+                <ul class="clearfix detail">
+                    <li>翡翠</li>
+                    <li>玉石</li>
+                    <li>宝石</li>
+                    <li>水晶</li>
+                </ul>
+            </li>
+            <li class="clearfix">
+                <p>></p>
+                <p>珠宝玉器</p>
+                <ul class="clearfix detail">
+                    <li>翡翠</li>
+                    <li>玉石</li>
+                    <li>宝石</li>
+                    <li>水晶</li>
+                    <li>琥珀</li>
+                    <li>玛瑙</li>
+                </ul>
+            </li>
+            <li class="clearfix">
+                <p>></p>
+                <p>珠宝玉器</p>
+                <ul class="clearfix detail">
+                    <li>翡翠</li>
+                    <li>玉石</li>
+                    <li>琥珀</li>
+                    <li>玛瑙</li>
+                </ul>
+            </li>
+            <li class="clearfix">
+                <p>></p>
+                <p>珠宝玉器</p>
+                <ul class="clearfix detail">
+                    <li>翡翠</li>
+                    <li>玉石</li>
+                    <li>宝石</li>
+                    <li>琥珀</li>
+                    <li>玛瑙</li>
+                </ul>
+            </li>
+            </ul>
+    </div>
+    
+    <script>
+        var $li = $("#list>li");
+        var details = $("#list .detail");
+        $li.on("mouseover",function(e){
+            var i = $(this).index();
+            $(details.get(i)).show();
+        })
+        $li.on("mouseout",function(e){
+            var i = $(this).index();
+            $(details.get(i)).hide();
+        })
+    </script>
+</body>
+</html>
