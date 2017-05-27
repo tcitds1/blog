@@ -39,8 +39,11 @@
     </div>
     <script src = "jquery-3.2.1.min.js"></script>
     <script>
-        window.onload = function(){
+       
             reset();
+            $("img").on("load",function(){
+                reset();
+            })
             $(window).resize(function(){
                 reset();
             })
@@ -61,7 +64,7 @@
                     arry[index] += $(this).outerHeight(true);
                 })
             }
-        }
+        
        
 
     </script>
