@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            position: relative;
+        }
+        .items {
+            width:240px;
+            position: absolute;
+            padding: 10px;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="items h7"><img src="https://unsplash.it/240/490/?random" alt=""></div>
+        <div class="items h8"><img src="https://unsplash.it/240/350/?random" alt=""></div>
+        <div class="items h9"><img src="https://unsplash.it/240/300/?random" alt=""></div>
+        <div class="items h2"><img src="https://unsplash.it/240/400/?random" alt=""></div>
+        <div class="items h3"><img src="https://unsplash.it/240/440/?random" alt=""></div>
+        <div class="items h4"><img src="https://unsplash.it/240/470/?random" alt=""></div>
+        <div class="items h5"><img src="https://unsplash.it/240/440/?random" alt=""></div>
+        <div class="items h6"><img src="https://unsplash.it/240/500/?random" alt=""></div>
+        <div class="items h10"><img src="https://unsplash.it/240/300/?random" alt=""></div>
+        <div class="items h11"><img src="https://unsplash.it/240/500/?random" alt=""></div>
+        <div class="items h12"><img src="https://unsplash.it/240/440/?random" alt=""></div>
+        <div class="items h13"><img src="https://unsplash.it/240/570/?random" alt=""></div>
+        <div class="items h14"><img src="https://unsplash.it/240/330/?random" alt=""></div>
+        <div class="items h15"><img src="https://unsplash.it/240/300/?random" alt=""></div>
+        <div class="items h4"><img src="https://unsplash.it/240/470/?random" alt=""></div>
+        <div class="items h5"><img src="https://unsplash.it/240/440/?random" alt=""></div>
+        <div class="items h6"><img src="https://unsplash.it/240/500/?random" alt=""></div>
+    </div>
+    <script src = "jquery-3.2.1.min.js"></script>
+    <script>
+        window.onload = function(){
+            reset();
+            $(window).resize(function(){
+                reset();
+            })
+            function reset(){
+                var number = parseInt($(window).width()/$(".items").width());
+                var arry = [];
+                var $items = $(".items");
+                for(var i = 0; i<number; i++){
+                    arry[i] = 0;
+                }
+                $items.each(function(){
+                    var min = Math.min.apply(null,arry);
+                    var index = arry.indexOf(min);
+                    console.log("Min"+min);
+                    console.log("Index"+arry.indexOf(min));
+                    $(this).css("left",$(this).outerWidth(true)*index+"px");
+                    $(this).css("top",min);
+                    arry[index] += $(this).outerHeight(true);
+                })
+            }
+        }
+       
+
+    </script>
+   
+</body>
+</html>
