@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .listView {
+            width: 1601px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        .imgct {
+            float: left;
+        }
+        .rowct::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<div class="listView">
+
+</div>
+<body>
+    <script src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script>
+        function Mutong($ct){
+            this.$ct = $ct;
+            this.rowList = [];
+            this.getImgUrls();
+            this.loadImg();
+        }
+        Mutong.prototype = {
+            
+            getImgUrls: function(n){
+                var urls = [];
+                var width;
+                var height;
+                for(var i = 0; i<n; i++){
+                    width = Math.floor(Math.random()*300+150);
+                    height = Math.floor(Math.random()*150+150);
+                    urls.push("https://unsplash.it/"+width+"/"+height+"/?random")
+                    //https://unsplash.it/200/300/?random    
+                }
+                return urls;
+            },
+         
+            loadImg: function(){
+                var urls = this.getImgUrls(20);
+                for(var i = 0; i<urls.length; i++){
+                    var _this = this;
+                    var img = new Image();
+                    img.src = urls[i];
+                    img.onload = function(){
+                        var width = this.width;
+                        var height = this.height;
+                        var img = this;
+                        var imgData = {
+                            img:img,
+                            height: 300,
+                            width: Math.floor((width/height)*300)
+                        };
+                        _this.render(imgData);    
+                    }
+                }
+            },
+
+            render: function(imgData){
+                var totalWidth=0;
+                var totalImgWidth = 0;
+                var trueHeight = 0;
+                this.rowList.push(imgData);
+                for(var i = 0; i<this.rowList.length; i++){
+                    totalWidth += this.rowList[i].width;
+                    console.log("totalwidth: "+totalWidth+"   i:"+i);
+                    if(totalWidth>1600){
+                        this.rowList.pop();
+                        this.rowList.forEach(function(element) {
+                            totalImgWidth += element.width;
+                        }, this);
+                        trueHeight = Math.floor((300*1600)/totalImgWidth)-0.5;
+                        console.log("trueheight: "+trueHeight);
+                        this.layOut(trueHeight);
+                        this.rowList = [];
+                        this.rowList.push(imgData);
+                    }
+                }
+            },
+            layOut: function(trueHeight){
+                var $rowct = $("<div class = 'rowct'></div>");
+                this.rowList.forEach(function(element) {
+                    var $imgct = $("<div class = 'imgct'></div>");
+                    var $img = $(element.img);
+                    $img.height(trueHeight);
+                    $imgct.append($img);
+                    $rowct.append($imgct);
+                }, this);
+                this.$ct.append($rowct);
+            },
+
+            test: function(){
+                console.log("functiontest:success");
+            }
+        }
+        var $listView = $(".listView");
+        var test = new Mutong($listView);
+    
+    </script>
+</body>
+</html>
