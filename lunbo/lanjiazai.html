@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul {
+            width: 700px;
+            margin: 0 auto;
+        }
+        ul::after {
+            content: "";
+            display: none;
+            clear: both;
+        }
+        #ct li {
+            float: left;
+        }
+        #ct li img{
+            height: 170px;
+            width: 300px;
+            padding: 10px;
+        }
+        #ct::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul id = "ct">
+        <li><img src="" data-src="img/1.jpg" alt=""></li>
+        <li><img src="" data-src="img/2.jpg" alt=""></li>
+        <li><img src="" data-src="img/3.jpg" alt=""></li>
+        <li><img src="" data-src="img/4.jpg" alt=""></li>
+        <li><img src="" data-src="img/5.jpg" alt=""></li>
+        <li><img src="" data-src="img/6.jpg" alt=""></li>
+        <li><img src="" data-src="img/7.jpg" alt=""></li>
+        <li><img src="" data-src="img/8.jpg" alt=""></li>
+        <li><img src="" data-src="img/9.jpg" alt=""></li>
+        <li><img src="" data-src="img/10.jpg" alt=""></li>
+        <li><img src="" data-src="img/11.jpg" alt=""></li>
+        <li><img src="" data-src="img/12.jpg" alt=""></li>
+        <li><img src="" data-src="img/13.jpg" alt=""></li>
+        <li><img src="" data-src="img/14.jpg" alt=""></li>
+        <li><img src="" data-src="img/15.jpg" alt=""></li>
+        <li><img src="" data-src="img/16.jpg" alt=""></li>
+        <li><img src="" data-src="img/17.jpg" alt=""></li>
+        <li><img src="" data-src="img/18.jpg" alt=""></li>
+        <li><img src="" data-src="img/19.jpg" alt=""></li>
+        <li><img src="" data-src="img/20.jpg" alt=""></li>
+      
+    </ul>
+        <p class = "test">come get your way</p>
+    
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+    function Lan($node,callback){
+        this.$node = $node;
+        this.callback = callback;
+        this.bind();    
+        this.check(); //第一次判断
+    }
+    Lan.prototype.isVisible = function($node){
+        var scrollTop = $(window).scrollTop();
+        var offsetTop = $node.offset().top;
+        var windowHeight = $(window).height();
+        var itHeight = $node.outerHeight(true);
+        if((offsetTop < scrollTop + windowHeight) &&(offsetTop > scrollTop - itHeight)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    Lan.prototype.bind = function(){
+        var _this = this;
+        $(window).on("scroll",function(){
+            _this.check();
+        })
+    }
+    Lan.prototype.check = function(){
+        if(this.isVisible(this.$node)){
+            this.callback(this.$node);
+        }
+    }
+   
+    // $node.each(function(index,node){
+    //     new Lan($(node),function($node){
+            // var data_src = $node.attr("data-src");
+            // $node.attr("src",data_src);
+            // $node.addClass("loaded");
+    //     })
+    // })
+
+
+    var Lazy = (function(){
+        return {
+            init:function($target,callback){
+                $target.each(function(index,$node){
+                    new Lan($($node),callback);
+                })
+            }
+        }
+    })()
+    var $imgs = $("#ct img");
+    var $tests = $(".test");
+    Lazy.init($tests,function($test){
+        $test.text($test.text()+"jiushizheyang");
+    })
+    Lazy.init($imgs,function($img){
+        var data_src = $img.attr("data-src");
+        $img.attr("src",data_src);
+        $img.addClass("loaded");
+    })
+
+    // getImg(); 
+    // $(window).on("scroll",function(){
+    //     getImg();  
+    // })
+    // function getImg(){
+    //     var $node = $("#ct img").not(".loaded");
+    //     $node.each(function(){
+    //         if(isVisible($(this))){
+    //             var data_src = $(this).attr("data-src");
+    //             $(this).attr("src",data_src);
+    //             $(this).addClass("loaded");
+    //         }
+    //     })
+    // }
+    
+    // function isVisible($node){
+    //     var scrollTop = $(window).scrollTop();
+    //     var offsetTop = $node.offset().top;
+    //     var windowHeight = $(window).height();
+    //     var itHeight = $node.outerHeight(true);
+    //     if((offsetTop < scrollTop + windowHeight) &&(offsetTop > scrollTop - itHeight)){
+    //         return true;
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }  
+    </script>
+</body>
+</html>

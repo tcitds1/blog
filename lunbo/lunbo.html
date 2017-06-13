@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .ct {
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .ct .showimg li {
+            float: left;
+        }
+        .ct .showimg::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .ct .showimg {
+            position: relative;
+            width: 1800px;
+        }
+        .ct img {
+            width:300px;
+        }
+        .ct .btn {
+            top: 50%;
+            margin-top: -16px;
+            position: absolute;            
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #fff;
+            color:#fff;
+            border-radius: 15px; 
+            width: 30px;
+            display: inline-block;
+        }
+        .ct .nextbtn {
+            left:268px;
+        }
+        
+        .ct .transimg li{
+            display: inline-block;
+            width: 20px;
+            padding: 3px;
+            margin: 0 2px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .ct .container {
+            width: 300px;
+            bottom: 4%;
+            position: absolute;
+            text-align: center;
+        }
+        .active {
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="ct">
+        <ul class = "showimg">
+            <li class = "list0"><img src="img/1.jpg" alt=""></li>
+            <li class = "list1"><img src="img/2.jpg" alt=""></li>
+            <li class = "list2"><img src="img/3.jpg" alt=""></li>
+            <li class = "list3"><img src="img/4.jpg" alt=""></li>
+        </ul>
+        <a class = "btn prebtn" href="#">&lt</a>
+        <a class = "btn nextbtn" href="#">&gt</a>
+        <a href="#"></a>
+        <div class="container">
+            <ul class = "transimg">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ct">
+        <ul class = "showimg">
+            <li class = "list0"><img src="img/1.jpg" alt=""></li>
+            <li class = "list1"><img src="img/2.jpg" alt=""></li>
+            <li class = "list2"><img src="img/3.jpg" alt=""></li>
+            <li class = "list3"><img src="img/4.jpg" alt=""></li>
+        </ul>
+        <a class = "btn prebtn" href="#">&lt</a>
+        <a class = "btn nextbtn" href="#">&gt</a>
+        <a href="#"></a>
+        <div class="container">
+            <ul class = "transimg">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script src = "jquery-3.2.1.min.js"></script>
+    <script>
+    
+        // $(".ct").each(function(index,node){
+        //     new Lun($(node));
+        // })
+        
+       var Fengzhuang = (function(){
+
+                function Lun($ct){
+                
+                    this.$ct = $ct;
+                    this.check = true;
+                    this.pageIndex = 0;
+                    this.imgWidth = $ct.width();
+                    this.totalWidth = $ct.find(".showimg").width();
+                    this.init();
+                    this.bind();
+                }
+                Lun.prototype.playNext = function(len){
+                    var imgWidth = this.imgWidth;
+                    var _this = this;
+                    var $showimg = this.$ct.find(".showimg");
+                    if(!this.check)
+                        return;
+                    this.check = false;
+                    $showimg.animate({left:"-="+(imgWidth*len)},function(){
+                        _this.pageIndex = _this.pageIndex + len ; 
+                        if(_this.pageIndex==4){
+                            $showimg.css("left","-"+imgWidth+"px");
+                            _this.pageIndex = 0;
+                        }
+                        _this.showActive();
+                        _this.check = true;
+                    });
+                }
+                Lun.prototype.playPre = function(len){
+                    var imgWidth = this.imgWidth;
+                    var totalWidth = this.totalWidth;
+                    var _this = this;
+                    var $showimg = this.$ct.find(".showimg");
+                    if(!this.check)
+                        return;
+                    this.check = false;
+                    $showimg.animate({left:"+="+(imgWidth*len)},function(){
+                        _this.pageIndex = _this.pageIndex-len;
+                        if(_this.pageIndex<0){
+                            $showimg.css("left","-"+(totalWidth-2*imgWidth)+"px");
+                            _this.pageIndex=3;
+                        }
+                        _this.showActive();
+                        _this.check = true;
+                    })          
+                }
+                
+                Lun.prototype.init = function(){
+                    var imgWidth = this.imgWidth;
+                    var $ct = this.$ct;
+                    var $showimg = $ct.find(".showimg");
+                    var $first = $ct.find(".showimg li").first();
+                    var $last = $ct.find(".showimg li").last();
+                    $showimg.prepend($last.clone())
+                        .append($first.clone())
+                        .css("left","-"+imgWidth+"px")
+                    this.showActive();
+                }
+                Lun.prototype.bind = function(){
+                    var _this = this;
+                    var $ct = this.$ct;
+                    var $prebtn = $ct.find(".prebtn");
+                    var $nextbtn = $ct.find(".nextbtn");
+                    var $xiabiao = $ct.find(".transimg li");
+                    $xiabiao.on("click",function(){
+                        var len;
+                        var index = $(this).index();
+                        if(index<_this.pageIndex){
+                            len = _this.pageIndex - index;
+                            _this.playPre(len);
+                        }
+                        else{
+                            len = index - _this.pageIndex;
+                            _this.playNext(len);
+                        }
+                    })
+                    $prebtn.on("click",function(){
+                        _this.playPre(1);
+                        console.log(_this.pageIndex);
+                    });
+                    $nextbtn.on("click",function(){
+                        _this.playNext(1);
+                        console.log(_this.pageIndex);
+                    })
+                }
+                Lun.prototype.showActive = function(){
+                    var $xiabiao = this.$ct.find(".transimg li");
+                    $xiabiao.removeClass("active");
+                    $($xiabiao.get(this.pageIndex)).addClass("active");
+                }
+                return {
+                    init:function($node){
+                        $node.each(function(index,node){
+                            new Lun($(node));
+                        })
+                    }
+                };
+         })()
+        Fengzhuang.init($(".ct"));
+
+
+        //  var $ct = $(".ct"),
+        //     $showimg = $(".ct .showimg"),
+        //     $first = $(".ct .showimg li").first(),
+        //     $last = $(".ct .showimg li").last(),
+        //     $prebtn = $(".prebtn"),
+        //     $nextbtn = $(".nextbtn"),
+        //     $xiabiao = $(".container .transimg li"),
+        //     pageIndex = 0,
+        //     check = true;
+        // function showActive(){
+            // $xiabiao.removeClass("active");
+            // $($xiabiao.get(pageIndex)).addClass("active");
+        // }
+
+        // $showimg.prepend($last.clone())
+        //         .append($first.clone())
+        //         .css("left","-300px")
+        // showActive();
+
+
+        // function playpre(len){
+        //     if(!check)
+        //         return;
+        //     check = false;
+        //     $showimg.animate({left:"+="+(300*len)},function(){
+        //         pageIndex = pageIndex-len;
+        //         if(pageIndex<0){
+        //             $showimg.css("left","-1200px");
+        //             pageIndex=3;
+        //         }
+        //         showActive();
+        //         check = true;
+        //     })           
+        // }
+        // function playnext(len){
+        //     if(!check)
+        //         return;
+        //     check = false;
+        //     $showimg.animate({left:"-="+(300*len)},function(){
+        //         pageIndex = pageIndex + len ; 
+        //         if(pageIndex==4){
+        //             $showimg.css("left","-300px");
+        //             pageIndex = 0;
+        //         }
+        //         showActive();
+        //         check = true;
+        //     });    
+        // }
+        // $xiabiao.on("click",function(){
+        //     var len;
+        //     var index = $(this).index();
+        //     if(index<pageIndex){
+        //         len = pageIndex - index;
+        //         playpre(len);
+        //     }
+        //     else{
+        //         len = index - pageIndex;
+        //         playnext(len);
+        //     }
+        // })
+        // $prebtn.on("click",function(){
+        //     playpre(1);
+        // })
+        // $nextbtn.on("click",function(){
+        //     playnext(1);
+        // })
+        
+
+       
+    </script>
+</body>
+</html>

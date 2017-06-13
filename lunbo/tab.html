@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tab {
+            width: 600px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+        }
+        .title::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .title {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .title>li {
+            float: left;
+            padding: 10px 30px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .content>li {
+            display: none;
+            padding: 15px;
+        }
+        .active {
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+        }
+        .show {
+            display: block !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <ul class = "title">
+            <li class = "active">标题1</li>
+            <li>标题2</li>
+            <li>标题3</li>
+        </ul>
+        <ul class = "content">
+            <li class = "show">内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ul>
+    </div>
+     <div class="tab">
+        <ul class = "title">
+            <li class = "active">标题1</li>
+            <li>标题2</li>
+            <li>标题3</li>
+        </ul>
+        <ul class = "content">
+            <li class = "show">内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ul>
+    </div>
+    <script>
+        var titles = document.querySelectorAll(".tab");
+        function Tab(ct){
+            this.ct = ct;
+            this.init();
+        } 
+        Tab.prototype.init  = function(){
+            var ct = this.ct;
+            var titles = ct.querySelectorAll(".title>li");
+            var content = ct.querySelectorAll(".content>li");
+            for(var i = 0 ;i < titles.length; i++){
+                titles[i].addEventListener("click",function(e){
+                    var index = [].indexOf.call(titles,this);
+                    titles.forEach(function(node) {
+                        node.classList.remove("active");
+                    }, this);
+                    this.classList.add("active");  
+                    content.forEach(function(node) {
+                        node.classList.remove("show");
+                    }, this);
+                    content[index].classList.add("show");
+                })         
+            }
+        }
+        new Tab(document.querySelectorAll(".tab")[0]);
+        
+        new Tab(document.querySelectorAll(".tab")[1]);
+
+    </script>
+    
+</body>
+</html>
