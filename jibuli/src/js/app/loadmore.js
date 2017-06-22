@@ -57,8 +57,8 @@ define([
         $items.each(function(){
             var min = Math.min.apply(null,arry);
             var index = arry.indexOf(min);
-            console.log(this.width);
-            console.log(this.height);
+            // console.log(this.width);
+            // console.log(this.height);
             // console.log("Min"+min);
             // console.log("Index"+arry.indexOf(min));
             $(this).css("left",this.width*index+"px");
