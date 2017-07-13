@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>吉卜力</title>
+	<style type="text/css">
+		@font-face {
+		  font-family: 'iconfont';  /* project id 279809 */
+		  src: url('//at.alicdn.com/t/font_4xa3qws4lfc7hkt9.eot');
+		  src: url('//at.alicdn.com/t/font_4xa3qws4lfc7hkt9.eot?#iefix') format('embedded-opentype'),
+		  url('//at.alicdn.com/t/font_4xa3qws4lfc7hkt9.woff') format('woff'),
+		  url('//at.alicdn.com/t/font_4xa3qws4lfc7hkt9.ttf') format('truetype'),
+		  url('//at.alicdn.com/t/font_4xa3qws4lfc7hkt9.svg#iconfont') format('svg');
+		}
+		
+		
+		html,body{
+			height:100%;
+			margin: 0;
+			padding: 0;
+			background-color: #f7f7f7;
+		}
+		ul,li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		#top {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top:100%;
+            left:100%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+		h1 {
+			padding:80px 0;
+		}
+
+		#header {
+			min-width:1170px;
+			height:100%;
+		}
+		#header .bar ul:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#header .bar ul {
+			background-color: #221815;
+			margin: 0;
+			padding-left: 0;
+			z-index: 1000;
+		}
+		#header .bar a,#header .aside a{
+			text-decoration: none;
+			color: #fff;
+			padding: 15px 15px;
+			display: inline-block;
+		}
+		#header .bar li {
+			float: left;
+			line-height: 24px;
+		}
+		#header .bar li:first-child {
+			line-height: auto;
+		}
+		#header .bar li img {
+			width: 20px;
+			height: 20px;
+		}
+/*
+		.main {
+			height: 95%;
+			background-color: #109ceb;
+			background-image: url(http://www.ghibli.jp/img/totoro.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			min-width:1170px;
+		}*/
+
+		.ct {
+            max-width: 1920px;
+            height:95%;
+            position: relative;
+            overflow: hidden;
+		}
+		.ct .showimg li {
+            float: left;
+        }
+        .ct .showimg::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .ct .showimg {
+			
+            position: relative;
+            width: 11418px;
+        }
+        .ct img {
+            width:1903px;
+        }
+        .ct .btn {
+            top: 50%;
+            margin-top: -16px;
+            position: absolute;            
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #fff;
+            color:#fff;
+            border-radius: 15px; 
+            width: 30px;
+            display: block;;
+        }
+        .ct .prebtn {
+            left: 20px;
+        }
+        .ct .nextbtn {
+            right: 20px;
+        }
+        
+        .ct .transimg li{
+            display: inline-block;
+            width: 30px;
+            padding: 3px;
+            margin: 0 2px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .ct .container {
+            width: 100%;
+            bottom: 4%;
+            position: absolute;
+            text-align: center;
+        }
+        .active {
+            background: #cccccc;
+        }
+
+		.bar {
+			position: fixed;
+			width: 100%;
+			z-index: 10000;
+		}
+
+
+		.aside {
+			background-color: #221815;
+			min-width:1170px;
+		}
+		.aside a {
+			display: inline-block;
+			padding: 15px;
+		}
+		.aside a:hover{
+			background-color: #404040;
+
+		}
+		#header li:hover {
+			background-color: #404040;
+		}
+
+
+		#intro {
+			text-align: center;
+			margin: 100px auto;
+			margin-top: 50px;
+			width: 1170px;
+		}
+		
+
+
+		.movie-bg,.team-bg{
+			background-color: #f7f7f7;
+			min-width: 1170px;
+		}
+		#movie,#team{
+			width: 1170px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		#movie p {
+			color:#ccc;
+		}
+		#movie ul {
+			margin-left: -15px;
+			padding-bottom: 130px
+		}
+		#movie li img{
+			width: 360px;
+			height: 220px;
+		}
+
+		
+	 	#movie ul:after{
+	 		content: "";
+	 		display: block;
+	 		clear: both;
+	 	}
+	 	#movie li {
+	 		float: left;
+	 		margin-left:30px;
+	 		width: 360px;
+	 		background-color: #fff;
+	 		margin-bottom: 40px;
+	 	}
+
+	 	.hover {
+			position: absolute;
+			background-color:rgba(254,209,54,.7);
+			height:100%;
+			width:100%;
+			text-align:center;
+			opacity:0;
+		}
+		.hover:before {
+		  content:"";
+		  display:inline-block;
+		  height:100%;
+		  vertical-align:middle;
+		}
+		#movie span {
+		  vertical-align:middle;
+		  font-size:16px;
+		  font-family: iconfont;
+		}
+		.hover:hover{
+		  display:block;
+		  opacity:1;
+		}
+		.ct {
+			position:relative;
+		}
+		#movie span {
+			font-family：icon-font;
+			color: #fff;
+            font-size:40px;
+		}
+
+		#history {
+			width: 1170px;
+			margin: 100px auto;
+			text-align: center;
+		}
+		#history h1{
+			padding: 20px 0;
+		}
+		#history >p {
+			margin-bottom: 80px;
+		}
+		#history .miaoshu p{
+			margin-top: -8px;
+		}
+		#history ul {
+			padding-left: 0;
+
+		}
+		#history h4 {
+			margin-top: 0;
+		}
+		#history li {
+			list-style: none;
+			position: relative;
+			padding-bottom: 125px;
+		}
+		#history img {
+			width: 160px;
+			height: 160px;
+			border-radius: 80px;
+			border: 7px solid #f1f1f1;
+		}
+		#history li:after {
+			content: "";
+			display: block;
+			position: absolute;
+			height: 400px;
+			border:2px solid #ccc;
+			left: 50%;
+			top: 0;
+			z-index: -1;
+		}
+		#history .miaoshu {
+			width: 440px;
+			position: absolute;
+			top:-5px;
+			left:0;
+			text-align: right;
+		}
+		#history .miaoshu:nth-child(even){
+			left:62%;
+			text-align:left;
+		}
+		#team {
+			padding: 240px 0;
+		}
+		#team h1{
+			padding: 0;
+		}
+		#team img {
+			width: 240px;
+			height: 240px;
+			border-radius: 120px;
+		}
+		#team:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#team .teammate {
+			float:left;
+			margin-left: 115px;
+		}
+		
+		#team .title {
+			margin-bottom: 50px;
+		}
+		#footer {
+			text-align: center;
+			padding: 20px 0;
+			width: 100%;
+			min-width: 1170px;
+		}
+		#footer a{
+			text-decoration: none;
+			color:#888;
+			margin-left: 30px;
+		}
+		#footer a:hover {
+			color:#0093d0;
+			text-decoration-color: #0093d0;
+			text-decoration-line: underline;
+		}
+		#footer li {
+			float: left;
+		}
+		#footer ul {
+			display: inline-block;
+		}
+		#footer ul:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		 .contact-bg{
+	      background-image: url(img/haer1.jpg);
+	      background-size: cover;
+	      background-position: center;
+	      padding: 200px 0;
+	      min-width: 1170px;
+	    }
+	  	#contact {
+	      text-align: center;
+	      width: 1170px;
+	      margin: 0 auto;
+	      opacity: 0.7;
+	      color: #fff;
+	    }
+	    #contact .container * {
+	      display: block;
+	      width: 100%;
+	      padding: 20px;
+	      margin:20px 0;
+	      border-radius: 4px;
+	    }
+	    #contact .area {
+	      height:175px;
+	    }
+	    #contact .container {
+	      width: 450px;
+	      float: left;
+	      margin-left: 75px;
+	    }
+	    #contact #sendForm:after{
+	      content: "";
+	      display: block;
+	      clear: both;
+	    }
+	    .sub {
+	      clear: both;
+	    }
+	    .sub input {
+	      padding: 25px;
+	      border-radius: 4px;
+	      color:#fff;
+	      background:#109CEB;
+	      color:#fff;
+	      border-color: #109CEB;
+	    }
+	    #contact h1 {
+	    	padding-bottom: 40px
+	    }
+		.loadmore {
+			margin: 0 auto;
+            width: 1170px;
+            /*border: 1px solid black;*/
+            position: relative;
+		}
+        .loadmore img {
+            position: absolute;
+            /*transition: all 1s;*/
+        }
+
+	</style>
+</head>
+<body>
+<div id="header">
+	<div class="bar">
+		<ul class="libar">
+			<li><a href=""><img src="http://www.ghibli.jp/img/home.png"></a></li>
+			<li><a href="">首页</a></li>
+			<li><a href="#history">历史</a></li>
+			<li><a href="#movie">作品</a></li>
+			<li><a href="#team">人员</a></li>
+			<li><a href="#contact">关于</a></li>
+		</ul>
+	</div>
+	
+	<div class="ct">
+        <ul class = "showimg">
+            <li class = "list0"><img src="img/l1.jpg" alt=""></li>
+            <li class = "list1"><img src="img/l2.jpg" alt=""></li>
+            <li class = "list2"><img src="img/l3.jpg" alt=""></li>
+            <li class = "list3"><img src="img/l4.jpg" alt=""></li>
+        </ul>
+        <a class = "btn prebtn" href="#">&lt</a>
+        <a class = "btn nextbtn" href="#">&gt</a>
+        <a href="#"></a>
+        <div class="container">
+            <ul class = "transimg">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div class="aside">
+		<a href="">STUDIO GHIBLI</a>
+	</div>
+
+</div>
+<div id="intro">
+	<h1>吉卜力工作室</h1>
+	<p>吉卜力工作室（スタジオジブリ，StudioGhibli，又译知步里工作室），是一家日本的动画工作室。其动画作品以高品质著称，其细腻又富有生气、充满想象力的作品在全世界获得极高的评价。吉卜力工作室现今位于日本东京都近郊的小金井市，占地300多坪，目前约有300多名员工。工作室标识为其代表作品角色《龙猫》来设计的。
+	吉卜力工作室的作品主要由宫崎骏、高畑勋负责创作，铃木敏夫担任行销。作曲家久石让亦为许多吉卜力工作室的作品制作过电影音乐。
+	其作品特点是“外表并不美丽甚至不可爱，然而性格立体、善良坚强的女主”“温和，不会有超出年龄的成熟，有自己的理想并为此努力的男主”。就宫崎骏的作品而言则附加“飞行器”“蒸汽朋克”“黑色的带眼睛的迷之生物”等属性。各个作品里也经常看到老婆婆和自然风景。</p>
+</div>
+
+<div class="movie-bg">
+	<div id="movie">
+	<h1>主要作品</h1>
+ 	<ul>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/fengzhigu.jpg">
+ 			</div>
+ 			<h4>风之谷</h4>
+ 			<p>1984</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/tiankongzhicheng.jpg">
+ 			</div>
+ 			<h4>天空之城</h4>
+ 			<p>1986</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/longmao.jpg">
+ 			</div>
+ 			<h4>龙猫</h4>
+ 			<p>1988</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/hongzhu1.jpg">
+ 			</div>
+ 			<h4>红猪</h4>
+ 			<p>1992</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/ceerqingting1.jpg">
+ 			</div>
+ 			<h4>侧耳倾听</h4>
+ 			<p>1995</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/youlinggongzhu1.jpg">
+ 			</div>
+ 			<h4>幽灵公主</h4>
+ 			<p>1997</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/qianyuqianxun.jpg">
+ 			</div>
+ 			<h4>千与千寻</h4>
+ 			<p>2001</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/haer.jpg">
+ 			</div>
+ 			<h4>哈尔的移动城堡</h4>
+ 			<p>2004</p>
+ 		</li>
+ 		<li>
+ 			<div class="ct">
+ 				<div class="hover">
+	 				<span>
+	 					&#xe639;
+	 				</span>
+ 				</div>
+ 				<img src="img/qifengle.jpg">
+ 			</div>
+ 			<h4>起风了</h4>
+ 			<p>2013</p>
+ 		</li>
+ 		
+ 	</ul>
+</div>
+</div>
+<div id="history">
+	<h1>历史</h1>
+	<p>Nausicaä of the Valley of the Wind-La tortue rouge</p>
+	<ul>
+		<li>
+			<img src="img/1.jpg">
+			<div class="tianchong"></div>
+			<div class="miaoshu">
+				<h4>名称由来</h4>
+				<p>“吉卜力”（Ghibli）是由宫崎骏命名，意思是在撒哈拉沙漠上季节热风，在纪录片《梦与狂想的世界》中，宫崎骏提到“吉卜力”是他从一架飞机的名字随便取来的。吉卜力工作室从2003年开始发行的杂志名字也叫《热风》。工作室的标志是使用他们的作品《龙猫》中的登场角色—“龙猫”（トトロ）来设计的。吉卜力的附属工作室“卡吉诺工作室（スタジオカジノ）”是以公司所在的“小金井市梶野町”的发音来命名的。
+				</p>
+			</div>
+		</li>
+		<li>
+			<img src="img/2.jpg">
+			<div class="miaoshu">
+				<h4>起点</h4>
+				<p>1985年6月15日，制作《风之谷》的团队“トップクラフト（TopCraft）”在德间书店出资帮助下，正式转型为吉卜力株式会社（类似股份有限公司），社长由德间的社长德间康快出任，工作室实际上的负责人为Top Craft的代表取缔役（约等于董事长的职位）原彻。一开始的运作方式为，要制作作品的时候便集合制作团队，作品完成后随即解散。动画师的酬劳是依照票房等收入采比例分配制，之后则为了培养动画制作人才而改为固定的薪水，以作为制作高品质和稳定的作品之据点。
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="tianchong"></div>
+			<img src="img/3.jpg">
+			<div class="miaoshu">
+				<h4>早期</h4>
+				<p>经典之作《天空之城》是吉卜力工作室的第一步正式作品。但直到1988年他们第二作《萤火虫之墓》、第三作《龙猫》同期上映，宫崎骏、高畑勋和铃木敏夫的雄心才真正降临。对于成长中的工作室来说虽不算是巨大财务成功，这对由不同基调的《萤火虫之墓》和《龙猫》代表的组合拳——分别由高畑和宫崎导演——标志了今后的方向。高畑承担了令人心碎的战争悲剧，而宫崎将日本流行文化中的一个长青角色介绍给儿童和家庭。
+				</p>
+			</div>
+		</li>
+		<li>
+			<img src="img/4.jpg">
+			<div class="miaoshu">
+				<h4>发展</h4>
+				<p>1989年宫崎的《魔女宅急便》上映，吉卜力工作室才收获了第一次大规模成功。吸引264万人次观看，票房为4,300,000,000日元，而发行收入为2,170,000,000日元。这部动画获得商业上的成功，也是日本1989年票房最高的电影，以巨大差距盘踞在当年日本票房顶峰，此片与迪斯尼60至90年代间的流行动画片轻松平起平坐。
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="tianchong"></div>
+			<img src="img/5.jpg">
+			<div class="miaoshu">
+				<h4>巅峰</h4>
+				<p>如果《幽灵公主》已经设立了一个高度门槛，《千与千寻》至少与之平齐而且在很多人眼里跳跃到更高。很明显的，这个“很多”也包括电影艺术科学学院沉闷的西方投票者，他们授予其2002年的奥斯卡“最佳动画长片”，这是第一部也是唯一一部日本动画电影获得此项后来已经变成皮克斯家产的奖项
+				</p>
+			</div>
+		</li>
+		<img src="img/6.jpg">
+	</ul>
+</div>
+<div class="team-bg">
+	<div id="team">
+		<div class="title">
+			<h1>制作团队</h1>
+			<p>核心成员</p>
+		</div>
+		<div class="teammate">
+			<img src="img/gaotianxun.jpg">
+			<h4>高畑勋</h4>
+			<p>导演.编剧</p>
+		</div>
+		<div class="teammate">
+			<img src="img/gongqijun.jpg">
+			<h4>宫崎骏</h4>
+			<p>导演.编剧</p>
+		</div>
+		<div class="teammate">
+			<img src="img/lingmu.jpg">
+			<h4>铃木敏夫</h4>
+			<p>制作人</p>
+		</div>
+		
+	</div>
+	
+</div>
+
+
+<div class="contact-bg">
+  <div id="contact">
+    <div class="form-title">
+      <h1>CONTACT US</h1>
+      <p>Lorem ipsum dolor sit amet consectetur</p>
+    </div>
+    <form id="sendForm">
+      <div class="container">
+        <input placeholder="YOUR NAME*" type="text" name="">
+        <input placeholder="YOUR EMAIL*" type="text" name="">
+        <input placeholder="YOUR PHONE*" type="text" name="">
+      </div>
+      <div class="container">
+        <textarea class="area" placeholder="YOUR MESSAGE*"></textarea>
+      </div>
+      <div class="sub">
+        <input type="submit" name="SEND MESSAGE" value="SEND MESSAGE">  
+      </div>
+      </form>
+  </div>
+</div>
+	
+<div id="footer">
+	<ul>
+		<li><a href="http://www.ghibli.jp/">吉卜力官网</a></li>
+		<li> <a href="http://www.ghibli-museum.jp/top.html">吉卜力美术馆</a></li>
+		<li><a href="https://zh.moegirl.org/zh-hans/%E5%90%89%E5%8D%9C%E5%8A%9B%E5%B7%A5%E4%BD%9C%E5%AE%A4">萌娘百科</a></li>
+		<li><a href="https://zh.wikipedia.org/wiki/%E5%90%89%E5%8D%9C%E5%8A%9B%E5%B7%A5%E4%BD%9C%E5%AE%A4">维基百科</a></li>
+	</ul>
+</div>
+
+<div class="loadmore">
+</div>
+<script src = "js/bundle.js"></script>
+</body>
+</html>
