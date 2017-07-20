@@ -1,0 +1,85 @@
+<!--
+    1. 圆角， 圆形
+    2. div 阴影
+    3. 2D 转换：放大、缩小、偏移、旋转
+    4. 3D 转换：移动、旋转
+    5. 背景色渐变
+    6. 过渡效果
+    7. 动画 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .example {
+            margin: 5px auto;
+            text-align: center;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            transition: all 1s;
+        }
+        .circle1 {
+            border-radius: 10%;
+        }
+        .circle2 {
+            border-radius: 50%;
+        }
+        .boxshadow {
+            box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
+        }
+        
+        .d1:hover {
+            transform: scale(2);
+        }
+        .d2:hover {
+            transform: scale(.5);
+        }
+        .d3:hover {
+            transform: translateX(100px);
+        }
+        .d4:hover {
+            transform:rotate(180deg);
+        }
+        .bgchange {
+            background-image: linear-gradient(to right,#ccc,#fff);
+        }
+        .animation {
+             animation: 2s animation infinite; 
+             transition: none;
+        }
+        @keyframes animation {
+            0% {
+
+            }
+            25% {
+                transform: translate(100px,0px);
+            }
+            50% {
+                transform: translate(100px,-100px);
+            }
+            75% {
+                transform: translate(0,-100px);
+            }
+            100% {
+                transform: translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="example circle1"></div>
+    <div class="example circle2"></div>
+    <div class="example boxshadow"></div>
+    <div class="example d1">hover</div>
+    <div class="example d2">hover</div>
+    <div class="example d3">hover</div>
+    <div class="example d4">hover</div>
+    <div class="example bgchange"></div>
+    <div class="example animation"></div>
+</body>
+</html>

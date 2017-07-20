@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .bgcolor {
+            height: 100%;
+            background-image: url(voice.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        .bgcolor::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50%;
+            background-image: linear-gradient(to left,#9d81c3,#fff);
+            top:0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.4;
+        }
+        .bgcolor::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50%;
+            background-image: linear-gradient(to right,pink,#fff);
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.5;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bgcolor">
+    </div>
+</body>
+</html>
