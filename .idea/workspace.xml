@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7841b17a-73ac-4480-95cf-272371bcc1a3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l2.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l3.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/ceerqingting1.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/ceerqingting1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/fengzhigu.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/fengzhigu.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/gaotianxun.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/gaotianxun.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/gongqijun.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/gongqijun.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/haer.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/haer.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/haer1.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/haer1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/hongzhu1.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/hongzhu1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/lingmu.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/lingmu.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/qianyuqianxun.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/qianyuqianxun.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/qianyuqianxun4.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/qianyuqianxun4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/qifengle.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/qifengle.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/tiankongzhicheng.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/tiankongzhicheng.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/youlinggongzhu1.jpg" afterPath="$PROJECT_DIR$/jibuli/webpack-ghibuli/img/youlinggongzhu1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,7 +35,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="170">
-                <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+                <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -36,20 +47,18 @@
         <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jibuli.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jibuli.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/jibuli.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="433" column="25" lean-forward="true" selection-start-line="433" selection-start-column="25" selection-end-line="433" selection-end-column="25" />
-              <folding>
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="407">
+              <caret line="581" column="13" lean-forward="true" selection-start-line="581" selection-start-column="13" selection-end-line="581" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,38 +66,10 @@
       <file leaf-file-name="carousel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/js/app/carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="85" column="47" lean-forward="false" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="47" />
+            <state relative-caret-position="295">
+              <caret line="81" column="41" lean-forward="false" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="l1.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l1.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="l2.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l2.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="l3.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l3.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="l4.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l4.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -189,28 +170,6 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="jibuli" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack-ghibuli" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="jibuli" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack-ghibuli" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="jibuli" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack-ghibuli" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="lanjiazai" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,12 +216,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504785485566</updated>
-      <workItem from="1504785491524" duration="5090000" />
+      <workItem from="1504785491524" duration="6501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5090000" />
+    <option name="totallyTimeSpent" value="6501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -276,7 +235,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4054348" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -410,7 +369,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="170">
-            <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+            <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
             <folding />
           </first_editor>
           <second_editor />
@@ -420,7 +379,7 @@
     <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -431,29 +390,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/jibuli.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="433" column="25" lean-forward="true" selection-start-line="433" selection-start-column="25" selection-end-line="433" selection-end-column="25" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/js/app/carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="85" column="47" lean-forward="false" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -471,6 +407,27 @@
     <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/img/l1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/js/app/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="81" column="41" lean-forward="false" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jibuli/webpack-ghibuli/jibuli.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="581" column="13" lean-forward="true" selection-start-line="581" selection-start-column="13" selection-end-line="581" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
