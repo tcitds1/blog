@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        #ct li img{
+            display: block;
+            height: 170px;
+            width: 300px;
+            padding: 10px;
+        }
         ul, li {
             margin: 0;
             padding: 0;
@@ -23,45 +29,40 @@
         #ct li {
             float: left;
         }
-        #ct li img{
-            height: 170px;
-            width: 300px;
-            padding: 10px;
-        }
-        
     </style>
 </head>
-    <ul id = "ct">
-        <li><img src="" data-src="img/1.jpg" alt=""></li>
-        <li><img src="" data-src="img/2.jpg" alt=""></li>
-        <li><img src="" data-src="img/3.jpg" alt=""></li>
-        <li><img src="" data-src="img/4.jpg" alt=""></li>
-        <li><img src="" data-src="img/5.jpg" alt=""></li>
-        <li><img src="" data-src="img/6.jpg" alt=""></li>
-        <li><img src="" data-src="img/7.jpg" alt=""></li>
-        <li><img src="" data-src="img/8.jpg" alt=""></li>
-        <li><img src="" data-src="img/9.jpg" alt=""></li>
-        <li><img src="" data-src="img/10.jpg" alt=""></li>
-        <li><img src="" data-src="img/11.jpg" alt=""></li>
-        <li><img src="" data-src="img/12.jpg" alt=""></li>
-        <li><img src="" data-src="img/13.jpg" alt=""></li>
-        <li><img src="" data-src="img/14.jpg" alt=""></li>
-        <li><img src="" data-src="img/15.jpg" alt=""></li>
-        <li><img src="" data-src="img/16.jpg" alt=""></li>
-        <li><img src="" data-src="img/17.jpg" alt=""></li>
-        <li><img src="" data-src="img/18.jpg" alt=""></li>
-        <li><img src="" data-src="img/19.jpg" alt=""></li>
-        <li><img src="" data-src="img/20.jpg" alt=""></li>
- 
-        
-    </ul>
+<ul id = "ct">
+    <li><img src="" data-src="img/1.jpg" alt=""></li>
+    <li><img src="" data-src="img/2.jpg" alt=""></li>
+    <li><img src="" data-src="img/3.jpg" alt=""></li>
+    <li><img src="" data-src="img/4.jpg" alt=""></li>
+    <li><img src="" data-src="img/5.jpg" alt=""></li>
+    <li><img src="" data-src="img/6.jpg" alt=""></li>
+    <li><img src="" data-src="img/7.jpg" alt=""></li>
+    <li><img src="" data-src="img/8.jpg" alt=""></li>
+    <li><img src="" data-src="img/9.jpg" alt=""></li>
+    <li><img src="" data-src="img/10.jpg" alt=""></li>
+    <li><img src="" data-src="img/11.jpg" alt=""></li>
+    <li><img src="" data-src="img/12.jpg" alt=""></li>
+    <li><img src="" data-src="img/13.jpg" alt=""></li>
+    <li><img src="" data-src="img/14.jpg" alt=""></li>
+    <li><img src="" data-src="img/15.jpg" alt=""></li>
+    <li><img src="" data-src="img/16.jpg" alt=""></li>
+    <li><img src="" data-src="img/17.jpg" alt=""></li>
+    <li><img src="" data-src="img/18.jpg" alt=""></li>
+    <li><img src="" data-src="img/19.jpg" alt=""></li>
+    <li><img src="" data-src="img/20.jpg" alt=""></li>
+
+
+</ul>
 <body>
-    <script src="jquery-3.2.1.min.js"></script>
-    <script>
-    
-    getImg(); 
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+
+    getImg();
     $(window).on("scroll",function(){
-        getImg();  
+        getImg();
+        console.log("ha")
     })
     function getImg(){
         var $node = $("#ct img").not(".loaded");
@@ -73,7 +74,7 @@
             }
         })
     }
-    
+
     function isVisible($node){
         var scrollTop = $(window).scrollTop();
         var offsetTop = $node.offset().top;
@@ -86,7 +87,6 @@
             return false;
         }
     }
-       
-    </script>
+</script>
 </body>
 </html>
