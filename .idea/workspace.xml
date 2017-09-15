@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7841b17a-73ac-4480-95cf-272371bcc1a3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/数据结构算法.md" afterPath="$PROJECT_DIR$/数据结构算法.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,15 +72,26 @@
         <entry file="file://$PROJECT_DIR$/数据结构算法.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <first_editor relative-caret-position="348">
+                <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
                 <folding>
-                  <marker date="1505356351280" expanded="true" signature="106:173" ph="/*...*/" />
-                  <marker date="1505356351280" expanded="true" signature="208:622" ph="{...}" />
-                  <marker date="1505356351280" expanded="true" signature="284:313" ph="{...}" />
-                  <marker date="1505356351280" expanded="true" signature="366:519" ph="{...}" />
-                  <marker date="1505356351280" expanded="true" signature="442:477" ph="{...}" />
-                  <marker date="1505356351280" expanded="true" signature="524:620" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="106:173" ph="/*...*/" />
+                  <marker date="1505407835967" expanded="true" signature="208:622" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="284:313" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="366:519" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="442:477" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="524:620" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="762:1151" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="907:1130" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="939:988" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="1024:1074" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="1088:1124" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="1195:1262" ph="/*...*/" />
+                  <marker date="1505407835967" expanded="true" signature="1302:1419" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="1337:1401" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="1560:1653" ph="/*...*/" />
+                  <marker date="1505407835967" expanded="true" signature="1695:2284" ph="{...}" />
+                  <marker date="1505407835967" expanded="true" signature="1764:1792" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -174,7 +186,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1650" />
@@ -257,15 +269,15 @@
       <workItem from="1505010883167" duration="5984000" />
       <workItem from="1505148711176" duration="616000" />
       <workItem from="1505355985138" duration="367000" />
-      <workItem from="1505361748144" duration="29000" />
+      <workItem from="1505361748144" duration="3544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17703000" />
+    <option name="totallyTimeSpent" value="21218000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14963119" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -275,7 +287,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23913044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23913044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -657,15 +669,26 @@
     <entry file="file://$PROJECT_DIR$/数据结构算法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <first_editor relative-caret-position="348">
+            <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
             <folding>
-              <marker date="1505356351280" expanded="true" signature="106:173" ph="/*...*/" />
-              <marker date="1505356351280" expanded="true" signature="208:622" ph="{...}" />
-              <marker date="1505356351280" expanded="true" signature="284:313" ph="{...}" />
-              <marker date="1505356351280" expanded="true" signature="366:519" ph="{...}" />
-              <marker date="1505356351280" expanded="true" signature="442:477" ph="{...}" />
-              <marker date="1505356351280" expanded="true" signature="524:620" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="106:173" ph="/*...*/" />
+              <marker date="1505407835967" expanded="true" signature="208:622" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="284:313" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="366:519" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="442:477" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="524:620" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="762:1151" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="907:1130" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="939:988" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="1024:1074" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="1088:1124" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="1195:1262" ph="/*...*/" />
+              <marker date="1505407835967" expanded="true" signature="1302:1419" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="1337:1401" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="1560:1653" ph="/*...*/" />
+              <marker date="1505407835967" expanded="true" signature="1695:2284" ph="{...}" />
+              <marker date="1505407835967" expanded="true" signature="1764:1792" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
