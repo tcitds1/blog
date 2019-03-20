@@ -1,11 +1,13 @@
 # 常见的动态效果和组件的编写
 
-[1.动态输入框](https://tcitds1.github.io/blog/html5&css3/input.html)
+[1.水平垂直居中的几种方法](https://github.com/tcitds1/blog/issues/1)
 
-[2.加载动图](https://tcitds1.github.io/blog/html5&css3/loading1.html)
+[2.c和c++的一些记录](https://github.com/tcitds1/blog/issues/2)
 
-[3.懒加载](https://tcitds1.github.io/blog/lanjiazai/16.html)
+[3.git初始化](https://github.com/tcitds1/blog/issues/3)
 
-[4.瀑布流(等宽图片布局)](https://tcitds1.github.io/blog/pubuliu/index.html)
+[4.es6语法笔记)](https://github.com/tcitds1/blog/issues/4)
 
-[5.木桶布局(等高图片布局)](https://tcitds1.github.io/blog/mutong&backtop/mutong.html)
+[5.vue中computed和watch的区别)](https://github.com/tcitds1/blog/issues/5)
+
+[5.记一次在阿里云服务器上跑node.js的过程](https://github.com/tcitds1/blog/issues/6)
