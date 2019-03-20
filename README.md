@@ -1,4 +1,4 @@
-# 常见的动态效果和组件的编写
+# Kurisu1901的blog
 
 [1.水平垂直居中的几种方法](https://github.com/tcitds1/blog/issues/1)
 
