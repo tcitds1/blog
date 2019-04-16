@@ -10,4 +10,6 @@
 
 [5.vue中computed和watch的区别](https://github.com/tcitds1/blog/issues/5)
 
-[5.记一次在阿里云服务器上跑node.js的过程](https://github.com/tcitds1/blog/issues/6)
+[6.记一次在阿里云服务器上跑node.js的过程](https://github.com/tcitds1/blog/issues/6)
+
+[7.一个popover的实现](https://github.com/tcitds1/blog/issues/7)
