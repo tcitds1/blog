@@ -1,3 +1,5 @@
+新博客地址 https://hupochuan.club/
+
 # Kurisu的blog
 
 [1.水平垂直居中的几种方法](https://github.com/tcitds1/blog/issues/1)
